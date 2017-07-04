@@ -1,7 +1,7 @@
 <?php
 include("/model/m.article.php");
 	
-class courseController
+class articleController
 {
 	public function getArticles()
 	{
@@ -12,28 +12,28 @@ class courseController
 	public function addArticle($contenu, $iduser, $idtheme, $image,$video)
 	{
 		$article = new articleModel;
-		$article->addCourse($contenu, $iduser, $idtheme, $image,$video);
+		$article->addArticle($contenu, $iduser, $idtheme, $image,$video);
 		//Faire la fonction
 	}
 
 	public function deleteArticleById($id)
 	{
 		$article = new articleModel;
-		$article->deleteCourse($id);
+		$article->deleteArticle($id);
 		//Faire la fonction
 	}
 
-	public function getCourseById($id)
+	public function getArticleById($id)
 	{
 		$article = new articleModel;
-		$article->getCourseById($id);
+		$article->getArticleById($id);
 		//Faire la fonction
 	}
 
 	public function updateCourse($contenu, $iduser, $video, $image)
 	{
 		$article = new articleModel;
-		$article->updateCourse($contenu, $iduser, $video, $image);
+		$article->updateArticle($contenu, $iduser, $video, $image);
 		//Faire la fonction
 	}
 }
