@@ -1,5 +1,5 @@
 <?php
-include_once("/db/projetwiki.php");
+include_once("/db/connexion.php");
 
 class userModel
 {
