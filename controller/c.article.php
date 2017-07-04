@@ -30,7 +30,7 @@ class articleController
 		//Faire la fonction
 	}
 
-	public function updateCourse($contenu, $iduser, $video, $image)
+	public function updateArticle($contenu, $iduser, $video, $image)
 	{
 		$article = new articleModel;
 		$article->updateArticle($contenu, $iduser, $video, $image);
