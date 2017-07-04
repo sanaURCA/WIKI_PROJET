@@ -1,12 +1,12 @@
 <?php
-include($_SERVER["DOCUMENT_ROOT"]."/db/connexion.php");
+include("/db/connexion.php");
 
 class connexionModel
 {
 	/*Affiche toute les associations*/
 	public function isUserCorrect($login, $pass)
 	{
-		$sql="SELECT * FROM USERS WHERE LOGIN='".$login."'";
+		$sql="SELECT * FROM utilisateur WHERE LOGIN='".$login."'";
 		$stmt = myPDO::donneInstance()->prepare($sql);
 		$stmt->execute();
 		$user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -39,7 +39,7 @@ class connexionModel
 
 	public function getTypeUserByLogin($login)
 	{
-		$sql="SELECT * FROM USERS WHERE LOGIN='".$login."'";
+		$sql="SELECT * FROM utilisateur WHERE LOGIN='".$login."'";
 		$stmt = myPDO::donneInstance()->prepare($sql);
 		$stmt->execute();
 		$user = $stmt->fetch(PDO::FETCH_ASSOC);
