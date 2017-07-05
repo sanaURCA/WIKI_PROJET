@@ -38,7 +38,7 @@ class articleModel
 		//Faire la fonction
 	}
 
-	public function updateaRTICLE($contenu, $iduser, $video, $image)
+	public function updateArticle($contenu, $iduser, $video, $image)
 	{
 		$sql="UPDATE ARTICLE  SET CONTENU ='".$contenu."', VIDEO='".$video."', IMAGE='".$image."' WHERE ID_USER ='".$iduser."' ";
 		$stmt = myPDO::donneInstance()->prepare($sql);
